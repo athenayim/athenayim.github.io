@@ -1,6 +1,6 @@
 ## Project Description 🌸
 
-My personal website hosted on Github Pages. Created with React, Next.js and Node.js, and deployed with TravisCI.
+My personal website hosted on Github Pages at [athenayim.github.io](http://athenayim.github.io). Created with React, Next.js and Node.js, and deployed with TravisCI.
 
 ## Getting Started 🔧
 
