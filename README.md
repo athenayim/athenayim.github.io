@@ -1,10 +1,10 @@
 ## Project Description 🌸
 
-My personal website hosted on Github Pages.
+My personal website hosted on Github Pages. Created with React and Next.js, and deployed with TravisCI.
 
 ## Getting Started 🔧
 
-Run the development server with
+Run the development server with:
 
 ```bash
 npm run dev
