@@ -4,7 +4,7 @@ import styles from "../styles/Page.module.css";
 const LandingPage: NextPage = () => {
   return (
     <>
-      <main className={styles.main}>
+      <main id="landing-page" className={styles.main}>
         <h1 className={styles.title}>Athena Yim</h1>
 
         <p className={styles.description}>

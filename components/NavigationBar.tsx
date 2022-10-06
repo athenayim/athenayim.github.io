@@ -1,12 +1,14 @@
-import { Button } from "@mantine/core";
 import styles from "../styles/NavigationBar.module.scss";
+import NavigationButton from "./NavigationButton";
 
 const NavigationBar = () => {
   return (
     <div className={styles.navbar}>
-      <Button>About Me</Button>
-      <Button>Work Experience</Button>
-      <Button>CV</Button>
+      <NavigationButton linkTo={"landing-page"}>Home</NavigationButton>
+      <NavigationButton linkTo={"about-page"}>About Me</NavigationButton>
+      <NavigationButton linkTo={"work-experience"}>
+        Work Experience
+      </NavigationButton>
     </div>
   );
 };
