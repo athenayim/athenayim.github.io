@@ -1,6 +1,6 @@
 ## Project Description 🌸
 
-My personal website hosted on Github Pages. Created with React and Next.js, and deployed with TravisCI.
+My personal website hosted on Github Pages. Created with React, Next.js and Node.js, and deployed with TravisCI.
 
 ## Getting Started 🔧
 
