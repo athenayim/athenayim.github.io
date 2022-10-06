@@ -1,6 +1,8 @@
+## Project Description 🌸
+
 My personal website hosted on Github Pages.
 
-## Getting Started
+## Getting Started 🔧
 
 Run the development server with
 
