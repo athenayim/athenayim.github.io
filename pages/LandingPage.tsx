@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
-import NavigationBar from "../components/NavigationBar";
 
 const LandingPage: NextPage = () => {
   return (
     <>
       <main className={styles.main}>
-        <NavigationBar />
         <h1 className={styles.title}>Athena Yim</h1>
 
         <p className={styles.description}>
