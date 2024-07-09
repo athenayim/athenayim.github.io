@@ -9,8 +9,7 @@ const LandingPage: NextPage = () => {
 
         <p className={styles.description}>
           <code className={styles.code}>
-            Imperial College London Computing student and aspiring web
-            developer.
+            MEng Computing graduate from Imperial College London.
           </code>
         </p>
       </main>
