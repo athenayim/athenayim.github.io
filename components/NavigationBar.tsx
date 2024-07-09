@@ -6,9 +6,6 @@ const NavigationBar = () => {
     <div className={styles.navbar}>
       <NavigationButton linkTo={"landing-page"}>Home</NavigationButton>
       <NavigationButton linkTo={"about-page"}>About Me</NavigationButton>
-      <NavigationButton linkTo={"work-experience"}>
-        Work Experience
-      </NavigationButton>
     </div>
   );
 };
