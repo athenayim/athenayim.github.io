@@ -3,9 +3,13 @@ import LandingPage from "./LandingPage";
 import AboutPage from "./AboutPage";
 import styles from "../styles/Page.module.css";
 import Head from "next/head";
+import { AppShell, Burger, Flex } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import NavigationBar from "../components/NavigationBar";
 
 const Home: NextPage = () => {
+  const [opened, { toggle }] = useDisclosure();
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +20,28 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="any" />
       </Head>
-      <NavigationBar />
+      <AppShell
+        header={{ height: 60 }}
+        aside={{
+          width: 200,
+          breakpoint: 0,
+          collapsed: { desktop: !opened, mobile: !opened },
+        }}
+        withBorder={false}
+      >
+        <AppShell.Header>
+          <Flex justify="flex-end" style={{padding: "2rem"}}>
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              size="sm"
+            />
+          </Flex>
+        </AppShell.Header>
+        <AppShell.Aside>
+          <NavigationBar />
+        </AppShell.Aside>
+      </AppShell>
       <LandingPage />
       <AboutPage />
     </div>

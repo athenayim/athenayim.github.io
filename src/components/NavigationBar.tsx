@@ -1,12 +1,12 @@
-import styles from "../styles/NavigationBar.module.scss";
+import { Stack } from "@mantine/core";
 import NavigationButton from "./NavigationButton";
 
 const NavigationBar = () => {
   return (
-    <div className={styles.navbar}>
+    <Stack style={{padding: "2rem 2rem 0 2rem"}}>
       <NavigationButton linkTo={"landing-page"}>Home</NavigationButton>
       <NavigationButton linkTo={"about-page"}>About Me</NavigationButton>
-    </div>
+    </Stack>
   );
 };
 
