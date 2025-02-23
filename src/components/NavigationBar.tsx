@@ -9,7 +9,7 @@ const NavigationButton = (props: {
 
   return (
     <Link href={`#${linkTo}`} passHref scroll={true}>
-      <Button variant="subtle" color="pink" size="lg" radius="md">
+      <Button variant="subtle" color="pink" radius="md">
         {children}
       </Button>
     </Link>
