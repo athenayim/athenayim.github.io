@@ -2,7 +2,7 @@ import "@mantine/core/styles.css";
 import "../styles/globals.css";
 
 import type { AppProps } from "next/app";
-import {  MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { theme } from "../styles/theme";
 
 function App({ Component, pageProps }: AppProps) {

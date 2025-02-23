@@ -5,7 +5,9 @@ My personal website hosted on Github Pages at [athenayim.github.io](http://athen
 # Getting Started 🔧
 
 ## First time installation
+
 Install node modules:
+
 ```
 npm install
 ```
