@@ -1,13 +1,27 @@
-import { Stack } from "@mantine/core";
-import NavigationButton from "./NavigationButton";
+import { Button, Stack } from "@mantine/core";
+import Link from "next/link";
 
-const NavigationBar = () => {
+const NavigationButton = (props: {
+  linkTo: string;
+  children: React.ReactNode;
+}) => {
+  const { linkTo, children } = props;
+
   return (
-    <Stack style={{padding: "2rem 2rem 0 2rem"}}>
+    <Link href={`#${linkTo}`} passHref scroll={true}>
+      <Button variant="subtle" color="pink" size="lg" radius="md">
+        {children}
+      </Button>
+    </Link>
+  );
+};
+
+export const NavigationBar = () => {
+  return (
+    <Stack align="flex-end" pt="sm" pr="sm">
       <NavigationButton linkTo={"landing-page"}>Home</NavigationButton>
       <NavigationButton linkTo={"about-page"}>About Me</NavigationButton>
     </Stack>
   );
 };
 
-export default NavigationBar;

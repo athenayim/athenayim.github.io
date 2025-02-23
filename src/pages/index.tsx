@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
-import LandingPage from "./LandingPage";
-import AboutPage from "./AboutPage";
 import styles from "../styles/Page.module.css";
 import Head from "next/head";
-import { AppShell, Burger, Flex } from "@mantine/core";
+import { ActionIcon, AppShell, Burger, Container, Flex, Group, Stack, ThemeIcon } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import NavigationBar from "../components/NavigationBar";
+import { NavigationBar } from "../components/NavigationBar";
+import { IconBrandGithub, IconBrandLinkedin, IconPhoto } from "@tabler/icons-react";
 
 const Home: NextPage = () => {
   const [opened, { toggle }] = useDisclosure();
@@ -23,14 +22,14 @@ const Home: NextPage = () => {
       <AppShell
         header={{ height: 60 }}
         aside={{
-          width: 200,
+          width: 150,
           breakpoint: 0,
           collapsed: { desktop: !opened, mobile: !opened },
         }}
         withBorder={false}
       >
         <AppShell.Header>
-          <Flex justify="flex-end" style={{padding: "2rem"}}>
+          <Flex justify="flex-end" style={{ padding: "2rem" }}>
             <Burger
               opened={opened}
               onClick={toggle}
@@ -42,8 +41,41 @@ const Home: NextPage = () => {
           <NavigationBar />
         </AppShell.Aside>
       </AppShell>
-      <LandingPage />
-      <AboutPage />
+      <Stack gap="md" id="landing-page" className={styles.landingPage}>
+      
+        <h1 className={styles.title}>Athena Yim</h1>
+
+        <Group gap="xs">
+          <ActionIcon component="a" href="https://github.com/athenayim" target="_blank">
+            <IconBrandGithub style={{ width: '80%', height: '80%' }} />
+          </ActionIcon>
+          <ActionIcon component="a" href="https://www.linkedin.com/in/athena-yim/" target="_blank">
+            <IconBrandLinkedin style={{ width: '80%', height: '80%' }} />
+          </ActionIcon>
+        </Group>
+
+        <code className={styles.code}>
+          MEng Computing graduate from Imperial College London.
+        </code>
+      </Stack>
+
+      <Container fluid id="about-page" className={styles.contentPage}>
+        <h1 id="work-experience" className={styles.subtitle}>
+        💻 Experience
+        </h1>
+        <ul className={styles.description}>
+          <li>Software engineer intern @ Jump Trading Group (2023 - London, UK)</li>
+          <li>Software engineer intern @ JPMorgan Chase & Co. (2022 - Glasgow, UK)</li>
+          <li>Undergraduate teaching assistant @ Imperial College London (2021-2023 - London, UK)</li>
+        </ul>
+
+        <h1 id="education" className={styles.subtitle}>
+        🎓 Education
+        </h1>
+        <ul className={styles.description}>
+          <li>MEng Computing @ Imperial College London (2020-2024)</li>
+        </ul>
+    </Container>
     </div>
   );
 };
